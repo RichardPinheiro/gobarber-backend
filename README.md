@@ -48,9 +48,9 @@ GoBarber is a barber shop scheduling project.
 ## How to contribute
 
 - Fork this repository;
-- Create a branch with your feature: `git checkout -b minha-feature`;
-- Commit your changes: `git commit -m 'feat: Minha nova feature'`;
-- Push to your branch: `git push origin minha-feature`.
+- Create a branch with your feature: `git checkout -b my-feature`;
+- Commit your changes: `git commit -m 'feat: My nova feature'`;
+- Push to your branch: `git push origin my-feature`.
 
 After the merge of your pull request is done, you can delete your branch.
 
