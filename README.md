@@ -37,7 +37,7 @@ This project was developed with the following technologies:
 
 ## 💻 Project
 
-Developers Radar is a project that aims to connect developers close to you who work with the same technologies.
+GoBarber is a barber shop scheduling project.
 
 ## 💻 To run this project
 
