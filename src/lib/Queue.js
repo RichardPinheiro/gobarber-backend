@@ -39,8 +39,6 @@ class Queue {
     handleFailure(job, error) {
         console.log(`Queue ${job.queue.name}: FAILED`, error)
     }
-
-
 }
 
 export default new Queue()
