@@ -24,10 +24,10 @@ class Database {
     }
 
     mongo() {
-        this.mongoConnection = Mongoose.connect(
-            "mongodb://localhost:27017,localhost:27018/gobarber?replicaSet=rs0",
-            { useNewUrlParser: true, useUnifiedTopology: true }
-        )
+        this.mongoConnection = Mongoose.connect(process.env.MONGO_URL, { 
+            useNewUrlParser: true,
+            useUnifiedTopology: true
+        })
     }
 
 }
