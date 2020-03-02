@@ -1,4 +1,3 @@
-import * as Yup from 'yup'  
 import { startOfHour, parseISO, isBefore, format, subHours } from 'date-fns'
 
 import User from '../models/User'
