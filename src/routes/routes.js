@@ -12,6 +12,7 @@ import NotificationController from '../app/controllers/NotificationController'
 import AvailableController from '../app/controllers/AvailableController'
 
 import validateUserStore from '../app/validators/UserStore';
+import validateUserUpdate from '../app/validators/UserUpdate';
 
 import authMiddleware from '../app/middlewares/auth'
 
@@ -24,7 +25,7 @@ routes.post('/sessions', SessionController.store)
 
 routes.use(authMiddleware)
 
-routes.put('/users', UserController.update)
+routes.put('/users', validateUserUpdate, UserController.update)
 
 routes.get('/providers', ProviderController.index)
 routes.get('/providers/:id/available', AvailableController.index)
