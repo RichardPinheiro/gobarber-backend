@@ -13,6 +13,7 @@ import AvailableController from '../app/controllers/AvailableController'
 
 import validateUserStore from '../app/validators/UserStore';
 import validateUserUpdate from '../app/validators/UserUpdate';
+import validateSessionStore from '../app/validators/SessionStore';
 
 import authMiddleware from '../app/middlewares/auth'
 
@@ -21,7 +22,7 @@ const upload = multer(multerConfig)
 
 routes.post('/users', validateUserStore, UserController.store)
 
-routes.post('/sessions', SessionController.store)
+routes.post('/sessions', validateSessionStore, SessionController.store)
 
 routes.use(authMiddleware)
 
