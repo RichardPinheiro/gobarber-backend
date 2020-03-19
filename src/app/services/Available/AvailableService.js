@@ -1,7 +1,7 @@
 import { startOfDay, endOfDay, setSeconds, setMinutes, setHours, format, isAfter } from 'date-fns'
 import { Op } from 'sequelize'
 
-import Appointment from '../models/Appointment'
+import Appointment from '../../models/Appointment'
 
 class AvailableService {
     async run({ provider_id, date }) {
