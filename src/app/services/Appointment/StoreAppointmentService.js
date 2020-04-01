@@ -4,6 +4,8 @@ import User from '../../models/User'
 import Appointment from '../../models/Appointment'
 import Notification from '../../models/Notification'
 
+import Cache from '../../../lib/Cache'
+
 class StoreAppointmentService {
     async run({ provider_id, user_id, date }) {
         if (user_id == provider_id) {
@@ -53,6 +55,8 @@ class StoreAppointmentService {
             content: `new schedule by ${user.name} for ${formattedDate}`,
             user: provider_id
         })
+
+        Cache.deleteByPrefix(`user:${user.id}:appointment`)
 
         return appointment
     }
